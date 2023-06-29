@@ -1,7 +1,7 @@
 'use strict';
 
 
-let votingRounds = 25;
+let votingRounds = 5;
 let productIndexArray = [];
 
 let imgElements = document.querySelectorAll('img');
@@ -16,13 +16,13 @@ function generateRandomProduct() {
 }
 
 function renderProductImages() {
-
   while (productIndexArray.length < 6) {
     let randomProductIndex = generateRandomProduct();
     if (!productIndexArray.includes(randomProductIndex)) {
       productIndexArray.push(randomProductIndex);
     }
   }
+
 
   for (let i = 0; i < imgElements.length; i++) {
     let randomIndex = productIndexArray.shift()
